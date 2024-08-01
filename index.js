@@ -19,9 +19,7 @@ const requestLogger = (req, res, next) => {
 
 app.use (requestLogger);
 
-const checkRequestBody = (req, res, next) => {
-    if (Object.keys(req.body).length ===0){
-        return res.status(400).json({error: "Request body cannot be empty"});
-    }
-    next();
-}
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Oh no! Something is broken');
+});
