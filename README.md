@@ -11,3 +11,4 @@ Express middleware
 Template engine (pug) views
 Self made API through forms
 
+//FYI I made commits during the process but didnt realize without pushing them tyoig git add and git -m doesn't reflect in my activity log and I understand for future assignments
